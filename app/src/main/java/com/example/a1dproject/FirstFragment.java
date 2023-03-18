@@ -1,5 +1,6 @@
 package com.example.a1dproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,17 +11,19 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.a1dproject.databinding.FragmentFirstBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
+        firebaseAuth = FirebaseAuth.getInstance();
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -32,8 +35,10 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                //NavHostFragment.findNavController(FirstFragment.this)
+                 //       .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                firebaseAuth.signOut();
+                startActivity( new Intent( getActivity(), MainActivity.class) );
             }
         });
     }

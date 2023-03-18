@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+
+            <size
+                android:width="52dp"
+                android:height="52dp"/>
+        </shape>
+    </item>
+    <item
+        android:width="25dp"
+        android:height="25dp"
+        android:gravity="center"
+        android:drawable="@drawable/google" />
+</layer-list>
