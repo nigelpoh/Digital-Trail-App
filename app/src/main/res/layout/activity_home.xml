@@ -4,31 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".controller.HomeActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+    <include
+        android:id="@+id/home"
+        layout="@layout/content_home" />
+
+    <RelativeLayout
+        android:id="@+id/suggest_an_attraction_fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.1DProject.AppBarOverlay">
+        android:layout_gravity="bottom|right"
+        android:padding="16dp"
+        android:layout_marginBottom="34dp"
+        android:clipToPadding="false">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.1DProject.PopupOverlay" />
+        <TextView
+            android:id="@+id/suggest_an_attraction_fab_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect"
+            android:layout_centerVertical="true"
+            android:elevation="5dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Suggest An Attraction"
+            android:textAppearance="@style/Home.FABLabel"
+            android:textColor="@android:color/black" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/suggest_an_attraction_fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/suggest_an_attraction_fab_label"
+            android:backgroundTint="@color/white"
+            android:src="@android:drawable/star_big_off"
+            app:borderWidth="0dp" />
+    </RelativeLayout>
 
-    <include layout="@layout/content_home" />
+    <RelativeLayout
+        android:id="@+id/exhibit_scanner_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="16dp"
+        android:layout_marginBottom="34dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/exhibit_scanner_fab_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect"
+            android:layout_centerVertical="true"
+            android:elevation="5dp"
+            android:text="Digital Trails Exhibit Scanner"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textAppearance="@style/Home.FABLabel"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/exhibit_scanner_fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/exhibit_scanner_fab_label"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="16dp"
+            app:borderWidth="0dp"
+            android:src="@android:drawable/star_big_off" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_out_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:padding="16dp"
+        android:layout_marginBottom="34dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/sign_out_fab_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect"
+            android:layout_centerVertical="true"
+            android:elevation="5dp"
+            android:text="Sign Out"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textAppearance="@style/Home.FABLabel"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sign_out_fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/sign_out_fab_label"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            android:src="@android:drawable/star_big_off" />
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/see_more_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

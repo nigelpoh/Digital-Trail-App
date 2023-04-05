@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="number_of_recommendations">5</integer>
+    <integer name="LOCATION_PERMISSION_REQUEST_CODE">100</integer>
+</resources>
