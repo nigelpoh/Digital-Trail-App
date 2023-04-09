@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">1D Project</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next Page</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="title_activity_exhibitScanner">ExhibitScannerActivity</string>
+    <string name="title_activity_attraction">AttractionActivity</string>
+
+    <string name="auth_hello">Hello There!</string>
+    <string name="auth_description">Discover Singapore through interactive trails</string>
+    <string name="auth_google">Continue With Google</string>
+
+    <string name="home_subtitle">Recommended For You Today</string>
+    <string name="home_suggestion">Suggest An Attraction</string>
+    <string name="home_scanner">Digital Trails Exhibit Scanner</string>
+    <string name="home_signOut">Sign Out</string>
+
+    <string name="weather_tomorrow">Tomorrow</string>
+    <string name="weather_dayAfter">Day After</string>
+
+    <string name="attraction_whatsThere">What\'s There</string>
+    <string name="attraction_recommendation">Recommendations</string>
+
+    <string name="scanner_title">Scan the NFC Here!</string>
+
+    <string name="offline_location">Jurong Lake Gardens</string>
+    <string name="offline_distance">No Network</string>
+    <string name="offline_description">Escape the hustle and bustle of the city and relax in the tranquil surroundings of Jurong Lake Gardens.</string>
+    <string name="offline_suitable">Best for a morning or afternoon visit</string>
+    <string name="offline_whatsThere">Jurong Lake Gardens is a beautiful and tranquil park located in the heart of Jurong, featuring a wide range of flora and fauna, as well as lakes, gardens, and other natural attractions.</string>
+    <string name="offline_recommendations">To make the most of your visit to Jurong Lake Gardens, start with a leisurely stroll through the park\'s many gardens and natural areas, taking in the sights and sounds of the local flora and fauna. Don\'t miss the Lakeside Garden, which features a stunning 7-hectare lake and a range of water sports and activities. If you\'re looking for some culture, be sure to visit the Chinese Garden and Japanese Garden, which offer a glimpse into the local architecture and traditions. And if you\'re feeling hungry or thirsty, stop by the park\'s many cafes and restaurants, which offer a range of delicious snacks and refreshments inspired by the local cuisine.</string>
+    <string name="offline_locality">Jurong Lake</string>
+    <string name="offline_region">West Region</string>
+
+</resources>

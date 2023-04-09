@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="elevation">5dp</dimen>
+    <dimen name="padding_fab">16dp</dimen>
+    <dimen name="margin_bottom_fab">34dp</dimen>
+    <dimen name="mini_fab_img">18dp</dimen>
+</resources>
