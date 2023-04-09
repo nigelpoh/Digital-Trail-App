@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:text="Hello There!"
+            android:text="@string/auth_hello"
             android:textAppearance="@style/TextAppearance.AuthAppearanceHeader" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:text="Discover Singapore through interactive trails"
+            android:text="@string/auth_description"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AuthAppearanceSubHeader" />
 
@@ -50,7 +50,7 @@
             android:background="@drawable/google_continue_pill"
             android:drawableLeft="@drawable/google_icon_button"
             android:paddingLeft="2dp"
-            android:text="Continue With Google"
+            android:text="@string/auth_google"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.ContinueWithGoogle"
             android:onClick="signInNow"

@@ -15,8 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:padding="16dp"
-        android:layout_marginBottom="34dp"
+        android:padding="@dimen/padding_fab"
+        android:layout_marginBottom="@dimen/margin_bottom_fab"
         android:clipToPadding="false">
 
         <TextView
@@ -25,10 +25,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_rect"
             android:layout_centerVertical="true"
-            android:elevation="5dp"
+            android:elevation="@dimen/elevation"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
-            android:text="Suggest An Attraction"
+            android:text="@string/home_suggestion"
             android:textAppearance="@style/Home.FABLabel"
             android:textColor="@android:color/black" />
 
@@ -36,10 +36,10 @@
             android:id="@+id/suggest_an_attraction_fab_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/fab_margin"
             android:layout_toRightOf="@id/suggest_an_attraction_fab_label"
             android:backgroundTint="@color/white"
-            android:src="@android:drawable/star_big_off"
+            android:src="@drawable/dices"
             app:borderWidth="0dp" />
     </RelativeLayout>
 
@@ -48,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:padding="16dp"
-        android:layout_marginBottom="34dp"
+        android:padding="@dimen/padding_fab"
+        android:layout_marginBottom="@dimen/margin_bottom_fab"
         android:clipToPadding="false">
 
         <TextView
@@ -58,8 +58,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_rect"
             android:layout_centerVertical="true"
-            android:elevation="5dp"
-            android:text="Digital Trails Exhibit Scanner"
+            android:elevation="@dimen/elevation"
+            android:text="@string/home_scanner"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
             android:textAppearance="@style/Home.FABLabel"
@@ -71,9 +71,9 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/exhibit_scanner_fab_label"
             android:backgroundTint="@color/white"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/fab_margin"
             app:borderWidth="0dp"
-            android:src="@android:drawable/star_big_off" />
+            android:src="@drawable/contactless" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -81,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:padding="16dp"
-        android:layout_marginBottom="34dp"
+        android:padding="@dimen/padding_fab"
+        android:layout_marginBottom="@dimen/margin_bottom_fab"
         android:clipToPadding="false">
 
         <TextView
@@ -91,8 +91,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_rect"
             android:layout_centerVertical="true"
-            android:elevation="5dp"
-            android:text="Sign Out"
+            android:elevation="@dimen/elevation"
+            android:text="@string/home_signOut"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
             android:textAppearance="@style/Home.FABLabel"
@@ -103,10 +103,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/sign_out_fab_label"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/fab_margin"
             android:backgroundTint="@color/white"
             app:borderWidth="0dp"
-            android:src="@android:drawable/star_big_off" />
+            android:src="@drawable/exit" />
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -118,6 +118,6 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="@color/white"
         app:borderWidth="0dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/more" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

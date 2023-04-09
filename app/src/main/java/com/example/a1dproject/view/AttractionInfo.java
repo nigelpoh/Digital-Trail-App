@@ -68,14 +68,14 @@ public class AttractionInfo extends LinearLayout{
             TextView location_header = mainContent.findViewById(R.id.attraction_location).findViewById(R.id.location_header);
             TextView location_area = mainContent.findViewById(R.id.attraction_location).findViewById(R.id.location_area);
 
-            header.setText("Jurong Lake Gardens");
-            description.setText("Escape the hustle and bustle of the city and relax in the tranquil surroundings of Jurong Lake Gardens.");
-            suitable.setText("Best for a morning or afternoon visit");
-            whats_there.setText("Jurong Lake Gardens is a beautiful and tranquil park located in the heart of Jurong, featuring a wide range of flora and fauna, as well as lakes, gardens, and other natural attractions.");
-            recommendations.setText("To make the most of your visit to Jurong Lake Gardens, start with a leisurely stroll through the park's many gardens and natural areas, taking in the sights and sounds of the local flora and fauna. Don't miss the Lakeside Garden, which features a stunning 7-hectare lake and a range of water sports and activities. If you're looking for some culture, be sure to visit the Chinese Garden and Japanese Garden, which offer a glimpse into the local architecture and traditions. And if you're feeling hungry or thirsty, stop by the park's many cafes and restaurants, which offer a range of delicious snacks and refreshments inspired by the local cuisine."  );
+            header.setText(context.getResources().getString(R.string.offline_location));
+            description.setText(context.getResources().getString(R.string.offline_description));
+            suitable.setText(context.getResources().getString(R.string.offline_suitable));
+            whats_there.setText(context.getResources().getString(R.string.offline_whatsThere));
+            recommendations.setText(context.getResources().getString(R.string.offline_recommendations));
             background.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.juronglakegardens));
-            location_header.setText("Jurong Lake");
-            location_area.setText("West Region");
+            location_header.setText(context.getResources().getString(R.string.offline_locality));
+            location_area.setText(context.getResources().getString(R.string.offline_region));
 
             Activity parentActivity = (Activity) context;
             parentActivity.findViewById(R.id.go_to_location_fab).setOnClickListener(new View.OnClickListener() {

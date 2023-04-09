@@ -20,7 +20,8 @@
         app:fabSize="mini"
         android:backgroundTint="@color/white"
         app:borderWidth="0dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/arrow"
+        app:maxImageSize="@dimen/mini_fab_img"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/go_to_location_fab"
@@ -31,6 +32,6 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="@color/white"
         app:borderWidth="0dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@drawable/location_fab" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

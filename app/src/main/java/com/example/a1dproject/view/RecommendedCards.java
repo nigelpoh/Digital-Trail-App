@@ -87,9 +87,9 @@ public class RecommendedCards extends LinearLayout{
 
             //Add the content
             recommendationCard.getCard().setLayoutParams(layout);
-            recommendationCard.setDescriptionText("Escape the hustle and bustle of the city and relax in the tranquil surroundings of Jurong Lake Gardens.");
-            recommendationCard.setDistanceText("No Network");
-            recommendationCard.setHeaderText("Jurong Lake Gardens");
+            recommendationCard.setDescriptionText(context.getResources().getString(R.string.offline_description));
+            recommendationCard.setDistanceText(context.getResources().getString(R.string.offline_distance));
+            recommendationCard.setHeaderText(context.getResources().getString(R.string.offline_location));
             recommendationCard.getImage().setImageDrawable(ContextCompat.getDrawable(context, R.drawable.juronglakegardens));
             mainContent.addView(recommendationCard.getCard());
 
