@@ -34,6 +34,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class AttractionInfo extends LinearLayout{
 
+    private static final String OFFLINE_VID = "2d7e8f1g5h6i3j4k";
     private ProgressBar progressBar;
     private androidx.coordinatorlayout.widget.CoordinatorLayout mainContent;
     private AttractionsInfoAsyncTask asyncTask;
@@ -54,10 +55,10 @@ public class AttractionInfo extends LinearLayout{
 
         mainContent.setVisibility(View.GONE);
         progressBar.setVisibility(View.VISIBLE);
-        if(NetworkUtils.isNetworkAvailable(context) && vid != "2d7e8f1g5h6i3j4k") {
+        if(NetworkUtils.isNetworkAvailable(context) && !OFFLINE_VID.equals(vid)) {
             asyncTask = new AttractionInfo.AttractionsInfoAsyncTask(this.context, vid);
             asyncTask.execute();
-        }else if(vid.equals("2d7e8f1g5h6i3j4k")){
+        }else if(OFFLINE_VID.equals(vid)){
             MiscUtils.displayToast(context, "No network connection! Please refresh app.");
             TextView header = mainContent.findViewById(R.id.attraction_header);
             TextView description = mainContent.findViewById(R.id.attraction_short_description);
