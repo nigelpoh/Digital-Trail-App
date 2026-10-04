@@ -122,6 +122,14 @@ public class RecommendedCards extends LinearLayout{
         protected void onPostExecute(RecommendationsAPIResponse recommendationsData) {
             super.onPostExecute(recommendationsData);
 
+            if (recommendationsData == null) {
+                progressBar.setVisibility(View.GONE);
+                mainContent.setVisibility(View.GONE);
+                mainContentSV.setVisibility(View.GONE);
+                MiscUtils.displayToast(context, "Recommendations are unavailable.");
+                return;
+            }
+
             for (int i = 0; i < recommendationsData.getVids().size(); i++) {
                 View recommendedCardView = LayoutInflater.from(context).inflate(R.layout.recommended_card, mainContent, false);
                 RecommendationCardSkeleton recommendationCard = new RecommendationCardSkeleton();

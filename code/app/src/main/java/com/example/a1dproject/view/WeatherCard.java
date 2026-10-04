@@ -77,6 +77,12 @@ public class WeatherCard extends LinearLayout {
         @Override
         protected void onPostExecute(WeatherAPIResponse weatherData) {
             super.onPostExecute(weatherData);
+            if (weatherData == null) {
+                progressBar.setVisibility(View.GONE);
+                mainContent.setVisibility(View.GONE);
+                MiscUtils.displayToast(context, "Weather data is unavailable.");
+                return;
+            }
             progressBar.setVisibility(View.GONE);
             mainContent.setVisibility(View.VISIBLE);
             weatherCard.setLocationText(weatherData.getLocation());

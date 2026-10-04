@@ -122,6 +122,13 @@ public class AttractionInfo extends LinearLayout{
         protected void onPostExecute(AttractionsAPIResponse attractionData) {
             super.onPostExecute(attractionData);
 
+            if (attractionData == null) {
+                progressBar.setVisibility(View.GONE);
+                mainContent.setVisibility(View.GONE);
+                MiscUtils.displayToast(context, "Attraction information is unavailable.");
+                return;
+            }
+
             TextView header = mainContent.findViewById(R.id.attraction_header);
             TextView description = mainContent.findViewById(R.id.attraction_short_description);
             TextView suitable = mainContent.findViewById(R.id.attraction_most_suitable);
