@@ -57,6 +57,17 @@ public class HomeActivity extends AppCompatActivity {
         );
     }
 
+    private void initializeLocationCards(){
+        if (binding.home.weatherInfo.getChildCount() == 0) {
+            WeatherCard weather = new WeatherCard(this);
+            binding.home.weatherInfo.addView(weather);
+        }
+        if (binding.home.recommendationsAll.getChildCount() == 0) {
+            RecommendedCards recommendedCards = new RecommendedCards(this);
+            binding.home.recommendationsAll.addView(recommendedCards);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,10 +88,7 @@ public class HomeActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, getResources().getInteger(R.integer.LOCATION_PERMISSION_REQUEST_CODE));
         }else{
-            WeatherCard weather = new WeatherCard(this);
-            RecommendedCards recommendedCards = new RecommendedCards(this);
-            binding.home.weatherInfo.addView(weather);
-            binding.home.recommendationsAll.addView(recommendedCards);
+            initializeLocationCards();
         }
 
         binding.suggestAnAttractionFab.setVisibility(View.INVISIBLE);
@@ -125,8 +133,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == getResources().getInteger(R.integer.LOCATION_PERMISSION_REQUEST_CODE)) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                WeatherCard weather = new WeatherCard(this);
-                binding.home.weatherInfo.addView(weather);
+                initializeLocationCards();
             }
         }
     }
